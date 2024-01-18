@@ -11,11 +11,13 @@ public class Timer : MonoBehaviour
     public AudioSource Win;
     public Text countdownText;
     public GameObject YouLose;
+    public GameObject TorchWin;
 
     void Start()
     {
         currentTime = startingTime;
         YouLose.SetActive(false);
+        TorchWin.SetActive(true);
     }
 
     void Update()

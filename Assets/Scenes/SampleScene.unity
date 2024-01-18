@@ -11889,6 +11889,7 @@ MonoBehaviour:
   Win: {fileID: 929201698}
   YouWin: {fileID: 935240083}
   YouLose: {fileID: 1321094683}
+  currentTime: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -13788,10 +13789,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1579777381}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -217.5, y: -162.5}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 110, y: 63}
+  m_SizeDelta: {x: 160, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1290294907
 MonoBehaviour:
@@ -13815,11 +13816,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 36
+    m_FontSize: 120
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 112
+    m_MaxSize: 120
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -13886,6 +13887,7 @@ MonoBehaviour:
   Win: {fileID: 0}
   countdownText: {fileID: 0}
   YouLose: {fileID: 0}
+  TorchWin: {fileID: 0}
 --- !u!1 &1321094683
 GameObject:
   m_ObjectHideFlags: 0
@@ -13918,6 +13920,7 @@ MonoBehaviour:
   Win: {fileID: 929201698}
   YouWin: {fileID: 1321094683}
   YouLose: {fileID: 1321094683}
+  currentTime: 0
 --- !u!4 &1321094685
 Transform:
   m_ObjectHideFlags: 0
@@ -14042,7 +14045,7 @@ GameObject:
   - component: {fileID: 1579777378}
   - component: {fileID: 1579777382}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Countdown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14147,6 +14150,7 @@ MonoBehaviour:
   Win: {fileID: 929201698}
   countdownText: {fileID: 1290294907}
   YouLose: {fileID: 1321094683}
+  TorchWin: {fileID: 0}
 --- !u!1 &1582512270
 GameObject:
   m_ObjectHideFlags: 0
@@ -14426,6 +14430,7 @@ GameObject:
   - component: {fileID: 1827375109}
   - component: {fileID: 1827375108}
   - component: {fileID: 1827375107}
+  - component: {fileID: 1827375110}
   m_Layer: 0
   m_Name: TorchWIn
   m_TagString: Untagged
@@ -14453,7 +14458,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Touch the torch to win!
+  m_text: Touch the torch!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14586,6 +14591,23 @@ RectTransform:
   m_AnchoredPosition: {x: 15.76, y: -9.25}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1827375110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827375105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc50d4bac6c75f2459de189b25bdd287, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lose: {fileID: 2038872565}
+  Win: {fileID: 929201698}
+  countdownText: {fileID: 0}
+  YouLose: {fileID: 1321094683}
+  TorchWin: {fileID: 1827375105}
 --- !u!1 &1881909506
 GameObject:
   m_ObjectHideFlags: 0
@@ -14690,6 +14712,7 @@ MonoBehaviour:
   Win: {fileID: 929201698}
   YouWin: {fileID: 935240083}
   YouLose: {fileID: 1321094683}
+  currentTime: 0
 --- !u!82 &1881909510
 AudioSource:
   m_ObjectHideFlags: 0
