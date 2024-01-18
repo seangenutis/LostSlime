@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float playerSpeed;
+    public AudioSource Lose;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,4 +25,10 @@ public class Player : MonoBehaviour
 
     }
     
+    void GameOver()
+    {
+        //Game ends if timer hits 0
+        Lose.Play();
+        Destroy(this.gameObject);
+    }
 }
